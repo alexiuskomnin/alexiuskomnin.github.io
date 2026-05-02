@@ -1,0 +1,14 @@
+# Hugo build output
+/public/
+/resources/
+.hugo_build.lock
+
+# OS / editor
+.DS_Store
+.idea/
+.vscode/
+*.swp
+
+# Claude Code local settings
+.claude/settings.local.json
+.claude/.credentials*

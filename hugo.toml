@@ -1,0 +1,88 @@
+baseURL = "https://alexiuskomnin.github.io/"
+locale = "en-us"
+title = "Alex Yuvchenko"
+theme = "PaperMod"
+
+enableRobotsTXT = true
+buildDrafts = false
+buildFuture = false
+buildExpired = false
+
+pagination.pagerSize = 10
+
+[minify]
+  disableXML = true
+  minifyOutput = true
+
+[params]
+  env = "production"
+  description = "Personal site of Alex Yuvchenko"
+  author = "Alex Yuvchenko"
+  defaultTheme = "auto"        # auto | light | dark
+  ShowReadingTime = true
+  ShowShareButtons = false
+  ShowPostNavLinks = true
+  ShowBreadCrumbs = true
+  ShowCodeCopyButtons = true
+  ShowToc = true
+  TocOpen = false
+  disableSpecial1stPost = false
+  hideSummary = false
+  ShowWordCount = false
+  ShowRssButtonInSectionTermList = true
+
+  [params.homeInfoParams]
+    Title = "Hi, I'm Oleksii 👋"
+    Content = """
+Site Reliability Engineer based in Ukraine. I build and operate the infrastructure that keeps distributed systems reliable at scale — Kubernetes, observability pipelines, and the tooling that makes on-call less painful.
+
+More on the [about page](/about/), or jump straight to [posts](/posts/).
+"""
+
+  [[params.socialIcons]]
+    name = "github"
+    url = "https://github.com/alexiuskomnin"
+  [[params.socialIcons]]
+    name = "linkedin"
+    url = "https://www.linkedin.com/in/oleksii-yuvchenko/"
+  [[params.socialIcons]]
+    name = "email"
+    url = "mailto:oleksii.yuvchenko@gmail.com"
+
+  [params.assets]
+    disableHLJS = true   # use Hugo's built-in Chroma highlighter
+
+[markup]
+  [markup.highlight]
+    style = "github-dark"   # change to taste: monokai, dracula, github, onedark, ...
+    lineNos = false
+    codeFences = true
+    guessSyntax = true
+    noClasses = true
+  [markup.goldmark.renderer]
+    unsafe = true   # allow raw HTML in markdown (useful for embeds)
+
+[outputs]
+  home = ["HTML", "RSS", "JSON"]   # JSON enables search if you turn it on later
+
+[menu]
+  [[menu.main]]
+    identifier = "about"
+    name = "About"
+    url = "/about/"
+    weight = 5
+  [[menu.main]]
+    identifier = "posts"
+    name = "Posts"
+    url = "/posts/"
+    weight = 10
+  [[menu.main]]
+    identifier = "tags"
+    name = "Tags"
+    url = "/tags/"
+    weight = 20
+  [[menu.main]]
+    identifier = "archive"
+    name = "Archive"
+    url = "/archives/"
+    weight = 30
